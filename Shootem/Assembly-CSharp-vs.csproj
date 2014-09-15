@@ -48,6 +48,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Rotate.cs" />
      <Compile Include="Assets\Scripts\Shoot.cs" />
+     <Compile Include="Assets\Scripts\SimpleMove.cs" />
+     <Compile Include="Assets\Scripts\getTextFromSlider.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
