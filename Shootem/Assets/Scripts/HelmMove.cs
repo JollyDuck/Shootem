@@ -2,10 +2,10 @@
 using System.Collections;
 
 public class HelmMove : MonoBehaviour {
-	public float[] speeds = {-20, -10, 0, 25, 50, 75, 100};
+	public float[] speeds = {-30, -20, 0, 25, 50, 75, 100};
 	public float currentSpeed = 0f;
 	public float targetSpeed = 0f;
-	public float acceleration = 5f;
+	public float acceleration = 0.1f;
 	public float rotationSpeed = 0.05f;
 	public int rudderPosition = 0;
 
@@ -36,14 +36,14 @@ public class HelmMove : MonoBehaviour {
 	}
 
 	private void updateSpeed(){
-		if(currentSpeed< targetSpeed){
-			rb.AddRelativeForce(new Vector3(0,0,acceleration));
+		if(targetSpeed>0){
+			rb.AddRelativeForce(new Vector3(0,0,acceleration*targetSpeed));
 		}
-		else if(currentSpeed>targetSpeed){
-			rb.AddRelativeForce(new Vector3(0,0,-acceleration));
+		else if(targetSpeed<0){
+			rb.AddRelativeForce(new Vector3(0,0,acceleration*targetSpeed));
 		}
 
-		currentSpeed = rb.velocity.z;
+
 	}
 
 	private void updateRotation(){
