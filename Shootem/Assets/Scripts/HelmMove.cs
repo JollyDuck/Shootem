@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class HelmMove : MonoBehaviour {
-	public float[] speeds = new float[7]; //-20, -10, 0, 25, 50, 75, 100
+	public float[] speeds = {-20, -10, 0, 25, 50, 75, 100};
 	public float currentSpeed = 0f;
 	public float targetSpeed = 0f;
 	public float acceleration = 5f;
